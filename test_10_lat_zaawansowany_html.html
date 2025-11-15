@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Zaawansowany test dla 10-latka — Wiedza, Matematyka, Historia</title>
+  <style>
+    :root{--bg:#ffffff;--card:#fbfbfb;--accent:#0b6}
+    body{font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:#111;max-width:900px;margin:18px auto;padding:18px}
+    header{display:flex;justify-content:space-between;align-items:center}
+    h1{font-size:1.4rem;margin:0;color:#0a3}
+    p.lead{margin:6px 0 18px;font-size:0.95rem}
+
+    .card{background:var(--card);border:1px solid #e6e6e6;border-radius:10px;padding:16px;margin-bottom:12px}
+    .question{display:none}
+    .question.active{display:block}
+    .q-number{font-weight:700;margin-bottom:6px}
+    label{display:block;margin:6px 0}
+
+    .controls{display:flex;gap:8px;justify-content:center;margin-top:12px}
+    button{padding:8px 12px;border-radius:8px;border:1px solid #cfcfcf;background:#fff;cursor:pointer}
+    button.primary{background:var(--accent);color:#fff;border-color:rgba(0,0,0,0.08)}
+    #timer{font-weight:700}
+
+    #result{display:none}
+    footer{font-size:0.85rem;color:#555;margin-top:18px}
+
+    @media (max-width:520px){body{padding:12px}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Zaawansowany test dla 10-latka</h1>
+    <div>Limit: <span id="timer">60:00</span></div>
+  </header>
+  <p class="lead">Format: 30 pytań (10 wiedza ogólna, 10 matematyka — poziom podwyższony, 10 historia). Pytania wyświetlane jedno po drugim. Odpowiedzi pojawią się po zakończeniu testu.</p>
+
+  <main id="quiz">
+    <!-- Questions generated below -->
+
+    <!-- CZĘŚĆ I: WIEDZA POWSZECHNA 1-10 -->
+
+    <div class="card question" id="q1">
+      <div class="q-number">Pytanie 1 / 30</div>
+      <div><strong>Jak nazywa się najstarsze pasmo górskie w Polsce?</strong></div>
+      <label><input type="radio" name="q1" value="a"> a) Tatry</label>
+      <label><input type="radio" name="q1" value="b"> b) Beskidy</label>
+      <label><input type="radio" name="q1" value="c"> c) Góry Świętokrzyskie</label>
+      <label><input type="radio" name="q1" value="d"> d) Sudety</label>
+    </div>
+
+    <div class="card question" id="q2">
+      <div class="q-number">Pytanie 2 / 30</div>
+      <div><strong>Co jest główną przyczyną zmiany pór roku?</strong></div>
+      <label><input type="radio" name="q2" value="a"> a) Zmiana odległości Ziemi od Słońca</label>
+      <label><input type="radio" name="q2" value="b"> b) Nachylenie osi Ziemi</label>
+      <label><input type="radio" name="q2" value="c"> c) Obrót Ziemi wokół własnej osi</label>
+      <label><input type="radio" name="q2" value="d"> d) Zmiana jasności Słońca</label>
+    </div>
+
+    <div class="card question" id="q3">
+      <div class="q-number">Pytanie 3 / 30</div>
+      <div><strong>Który pierwiastek jest potrzebny do oddychania ludzi i zwierząt?</strong></div>
+      <label><input type="radio" name="q3" value="a"> a) Azot</label>
+      <label><input type="radio" name="q3" value="b"> b) Wodór</label>
+      <label><input type="radio" name="q3" value="c"> c) Tlen</label>
+      <label><input type="radio" name="q3" value="d"> d) Hel</label>
+    </div>
+
+    <div class="card question" id="q4">
+      <div class="q-number">Pytanie 4 / 30</div>
+      <div><strong>Ile procent powierzchni Ziemi zajmują oceany (w przybliżeniu)?</strong></div>
+      <label><input type="radio" name="q4" value="a"> a) 30%</label>
+      <label><input type="radio" name="q4" value="b"> b) 50%</label>
+      <label><input type="radio" name="q4" value="c"> c) 70%</label>
+      <label><input type="radio" name="q4" value="d"> d) 90%</label>
+    </div>
+
+    <div class="card question" id="q5">
+      <div class="q-number">Pytanie 5 / 30</div>
+      <div><strong>Które z poniższych zwierząt jest drapieżnikiem?</strong></div>
+      <label><input type="radio" name="q5" value="a"> a) Koń</label>
+      <label><input type="radio" name="q5" value="b"> b) Lis</label>
+      <label><input type="radio" name="q5" value="c"> c) Krowa</label>
+      <label><input type="radio" name="q5" value="d"> d) Owca</label>
+    </div>
+
+    <div class="card question" id="q6">
+      <div class="q-number">Pytanie 6 / 30</div>
+      <div><strong>Która planeta jest najbliżej Słońca?</strong></div>
+      <label><input type="radio" name="q6" value="a"> a) Wenus</label>
+      <label><input type="radio" name="q6" value="b"> b) Mars</label>
+      <label><input type="radio" name="q6" value="c"> c) Merkury</label>
+      <label><input type="radio" name="q6" value="d"> d) Ziemia</label>
+    </div>
+
+    <div class="card question" id="q7">
+      <div class="q-number">Pytanie 7 / 30</div>
+      <div><strong>Jak nazywa się proces, w którym woda zamienia się w parę wodną?</strong></div>
+      <label><input type="radio" name="q7" value="a"> a) Skraplanie</label>
+      <label><input type="radio" name="q7" value="b"> b) Parowanie</label>
+      <label><input type="radio" name="q7" value="c"> c) Topnienie</label>
+      <label><input type="radio" name="q7" value="d"> d) Krzepnięcie</label>
+    </div>
+
+    <div class="card question" id="q8">
+      <div class="q-number">Pytanie 8 / 30</div>
+      <div><strong>Co jest podstawowym źródłem światła na Ziemi?</strong></div>
+      <label><input type="radio" name="q8" value="a"> a) Księżyc</label>
+      <label><input type="radio" name="q8" value="b"> b) Słońce</label>
+      <label><input type="radio" name="q8" value="c"> c) Gwiazdy</label>
+      <label><input type="radio" name="q8" value="d"> d) Lawa</label>
+    </div>
+
+    <div class="card question" id="q9">
+      <div class="q-number">Pytanie 9 / 30</div>
+      <div><strong>Gdzie znajdują się gołoborza – charakterystyczne rumowiska skalne?</strong></div>
+      <label><input type="radio" name="q9" value="a"> a) W Tatrach</label>
+      <label><input type="radio" name="q9" value="b"> b) W Sudetach</label>
+      <label><input type="radio" name="q9" value="c"> c) W Górach Świętokrzyskich</label>
+      <label><input type="radio" name="q9" value="d"> d) W Karpatach Wschodnich</label>
+    </div>
+
+    <div class="card question" id="q10">
+      <div class="q-number">Pytanie 10 / 30</div>
+      <div><strong>Jak nazywa się największy kontynent na Ziemi?</strong></div>
+      <label><input type="radio" name="q10" value="a"> a) Afryka</label>
+      <label><input type="radio" name="q10" value="b"> b) Azja</label>
+      <label><input type="radio" name="q10" value="c"> c) Ameryka Północna</label>
+      <label><input type="radio" name="q10" value="d"> d) Europa</label>
+    </div>
+
+    <!-- CZĘŚĆ II: MATEMATYKA 11-20 (wyższy poziom) -->
+
+    <div class="card question" id="q11">
+      <div class="q-number">Pytanie 11 / 30</div>
+      <div><strong>156 ÷ 12 = ?</strong></div>
+      <label><input type="radio" name="q11" value="a"> a) 11</label>
+      <label><input type="radio" name="q11" value="b"> b) 12</label>
+      <label><input type="radio" name="q11" value="c"> c) 13</label>
+      <label><input type="radio" name="q11" value="d"> d) 14</label>
+    </div>
+
+    <div class="card question" id="q12">
+      <div class="q-number">Pytanie 12 / 30</div>
+      <div><strong>Oblicz: 45 × 3 – 27 = ?</strong></div>
+      <label><input type="radio" name="q12" value="a"> a) 72</label>
+      <label><input type="radio" name="q12" value="b"> b) 90</label>
+      <label><input type="radio" name="q12" value="c"> c) 108</label>
+      <label><input type="radio" name="q12" value="d"> d) 135</label>
+    </div>
+
+    <div class="card question" id="q13">
+      <div class="q-number">Pytanie 13 / 30</div>
+      <div><strong>Jaka jest różnica między największą a najmniejszą liczbą w zestawie: 12, 45, 7, 31?</strong></div>
+      <label><input type="radio" name="q13" value="a"> a) 38</label>
+      <label><input type="radio" name="q13" value="b"> b) 33</label>
+      <label><input type="radio" name="q13" value="c"> c) 25</label>
+      <label><input type="radio" name="q13" value="d"> d) 19</label>
+    </div>
+
+    <div class="card question" id="q14">
+      <div class="q-number">Pytanie 14 / 30</div>
+      <div><strong>Ile to: 3/5 z 85?</strong></div>
+      <label><input type="radio" name="q14" value="a"> a) 45</label>
+      <label><input type="radio" name="q14" value="b"> b) 48</label>
+      <label><input type="radio" name="q14" value="c"> c) 51</label>
+      <label><input type="radio" name="q14" value="d"> d) 55</label>
+    </div>
+
+    <div class="card question" id="q15">
+      <div class="q-number">Pytanie 15 / 30</div>
+      <div><strong>Jaki jest wynik działania: 18 × 14 = ?</strong></div>
+      <label><input type="radio" name="q15" value="a"> a) 192</label>
+      <label><input type="radio" name="q15" value="b"> b) 208</label>
+      <label><input type="radio" name="q15" value="c"> c) 236</label>
+      <label><input type="radio" name="q15" value="d"> d) 252</label>
+    </div>
+
+    <div class="card question" id="q16">
+      <div class="q-number">Pytanie 16 / 30</div>
+      <div><strong>Dana jest liczba 4 372. Jaką wartość ma cyfra 7?</strong></div>
+      <label><input type="radio" name="q16" value="a"> a) 7</label>
+      <label><input type="radio" name="q16" value="b"> b) 70</label>
+      <label><input type="radio" name="q16" value="c"> c) 700</label>
+      <label><input type="radio" name="q16" value="d"> d) 7 000</label>
+    </div>
+
+    <div class="card question" id="q17">
+      <div class="q-number">Pytanie 17 / 30</div>
+      <div><strong>Oblicz: 240 ÷ 8 + 17 = ?</strong></div>
+      <label><input type="radio" name="q17" value="a"> a) 37</label>
+      <label><input type="radio" name="q17" value="b"> b) 47</label>
+      <label><input type="radio" name="q17" value="c"> c) 52</label>
+      <label><input type="radio" name="q17" value="d"> d) 62</label>
+    </div>
+
+    <div class="card question" id="q18">
+      <div class="q-number">Pytanie 18 / 30</div>
+      <div><strong>Zegar wskazuje 13:45. Ile minut brakuje do 15:00?</strong></div>
+      <label><input type="radio" name="q18" value="a"> a) 75</label>
+      <label><input type="radio" name="q18" value="b"> b) 60</label>
+      <label><input type="radio" name="q18" value="c"> c) 45</label>
+      <label><input type="radio" name="q18" value="d"> d) 30</label>
+    </div>
+
+    <div class="card question" id="q19">
+      <div class="q-number">Pytanie 19 / 30</div>
+      <div><strong>Jaką liczbą jest wynik działania: 8² – 5 × 6?</strong></div>
+      <label><input type="radio" name="q19" value="a"> a) 34</label>
+      <label><input type="radio" name="q19" value="b"> b) 38</label>
+      <label><input type="radio" name="q19" value="c"> c) 46</label>
+      <label><input type="radio" name="q19" value="d"> d) 52</label>
+    </div>
+
+    <div class="card question" id="q20">
+      <div class="q-number">Pytanie 20 / 30</div>
+      <div><strong>W sklepie kupiono 4 paczki po 18 zł i jeden przedmiot za 37 zł. Ile zapłacono razem?</strong></div>
+      <label><input type="radio" name="q20" value="a"> a) 79 zł</label>
+      <label><input type="radio" name="q20" value="b"> b) 97 zł</label>
+      <label><input type="radio" name="q20" value="c"> c) 109 zł</label>
+      <label><input type="radio" name="q20" value="d"> d) 121 zł</label>
+    </div>
+
+    <!-- CZĘŚĆ III: HISTORIA 21-30 -->
+
+    <div class="card question" id="q21">
+      <div class="q-number">Pytanie 21 / 30</div>
+      <div><strong>Kto był pierwszym królem Polski?</strong></div>
+      <label><input type="radio" name="q21" value="a"> a) Mieszko I</label>
+      <label><input type="radio" name="q21" value="b"> b) Bolesław Chrobry</label>
+      <label><input type="radio" name="q21" value="c"> c) Kazimierz Wielki</label>
+      <label><input type="radio" name="q21" value="d"> d) Władysław Łokietek</label>
+    </div>
+
+    <div class="card question" id="q22">
+      <div class="q-number">Pytanie 22 / 30</div>
+      <div><strong>W jakim kraju narodziła się demokracja?</strong></div>
+      <label><input type="radio" name="q22" value="a"> a) Egipt</label>
+      <label><input type="radio" name="q22" value="b"> b) Grecja</label>
+      <label><input type="radio" name="q22" value="c"> c) Rzym</label>
+      <label><input type="radio" name="q22" value="d"> d) Chiny</label>
+    </div>
+
+    <div class="card question" id="q23">
+      <div class="q-number">Pytanie 23 / 30</div>
+      <div><strong>Kto był autorem teorii heliocentrycznej?</strong></div>
+      <label><input type="radio" name="q23" value="a"> a) Isaac Newton</label>
+      <label><input type="radio" name="q23" value="b"> b) Mikołaj Kopernik</label>
+      <label><input type="radio" name="q23" value="c"> c) Galileo Galilei</label>
+      <label><input type="radio" name="q23" value="d"> d) Eratostenes</label>
+    </div>
+
+    <div class="card question" id="q24">
+      <div class="q-number">Pytanie 24 / 30</div>
+      <div><strong>Jak nazywał się pierwszy człowiek w kosmosie?</strong></div>
+      <label><input type="radio" name="q24" value="a"> a) Neil Armstrong</label>
+      <label><input type="radio" name="q24" value="b"> b) Jurij Gagarin</label>
+      <label><input type="radio" name="q24" value="c"> c) John Glenn</label>
+      <label><input type="radio" name="q24" value="d"> d) Aleksiej Leonow</label>
+    </div>
+
+    <div class="card question" id="q25">
+      <div class="q-number">Pytanie 25 / 30</div>
+      <div><strong>Który władca wygrał bitwę pod Grunwaldem?</strong></div>
+      <label><input type="radio" name="q25" value="a"> a) Jan III Sobieski</label>
+      <label><input type="radio" name="q25" value="b"> b) Władysław Jagiełło</label>
+      <label><input type="radio" name="q25" value="c"> c) Kazimierz Odnowiciel</label>
+      <label><input type="radio" name="q25" value="d"> d) Bolesław Krzywousty</label>
+    </div>
+
+    <div class="card question" id="q26">
+      <div class="q-number">Pytanie 26 / 30</div>
+      <div><strong>Czym były piramidy w starożytnym Egipcie?</strong></div>
+      <label><input type="radio" name="q26" value="a"> a) Pałacami</label>
+      <label><input type="radio" name="q26" value="b"> b) Grobowcami</label>
+      <label><input type="radio" name="q26" value="c"> c) Magazynami zboża</label>
+      <label><input type="radio" name="q26" value="d"> d) Obserwatoriami</label>
+    </div>
+
+    <div class="card question" id="q27">
+      <div class="q-number">Pytanie 27 / 30</div>
+      <div><strong>W którym roku wybuchła II wojna światowa?</strong></div>
+      <label><input type="radio" name="q27" value="a"> a) 1914</label>
+      <label><input type="radio" name="q27" value="b"> b) 1920</label>
+      <label><input type="radio" name="q27" value="c"> c) 1939</label>
+      <label><input type="radio" name="q27" value="d"> d) 1945</label>
+    </div>
+
+    <div class="card question" id="q28">
+      <div class="q-number">Pytanie 28 / 30</div>
+      <div><strong>Kto stworzył słynny obraz „Mona Lisa”?</strong></div>
+      <label><input type="radio" name="q28" value="a"> a) Michał Anioł</label>
+      <label><input type="radio" name="q28" value="b"> b) Vincent van Gogh</label>
+      <label><input type="radio" name="q28" value="c"> c) Leonardo da Vinci</label>
+      <label><input type="radio" name="q28" value="d"> d) Pablo Picasso</label>
+    </div>
+
+    <div class="card question" id="q29">
+      <div class="q-number">Pytanie 29 / 30</div>
+      <div><strong>Które królestwo było znane z wojowników zwanych Spartanami?</strong></div>
+      <label><input type="radio" name="q29" value="a"> a) Egipt</label>
+      <label><input type="radio" name="q29" value="b"> b) Rzym</label>
+      <label><input type="radio" name="q29" value="c"> c) Grecja</label>
+      <label><input type="radio" name="q29" value="d"> d) Babilon</label>
+    </div>
+
+    <div class="card question" id="q30">
+      <div class="q-number">Pytanie 30 / 30</div>
+      <div><strong>Która polska królowa była żoną Zygmunta Augusta i znana jest z wprowadzenia mody na czarne stroje?</strong></div>
+      <label><input type="radio" name="q30" value="a"> a) Jadwiga Andegaweńska</label>
+      <label><input type="radio" name="q30" value="b"> b) Bona Sforza</label>
+      <label><input type="radio" name="q30" value="c"> c) Barbara Radziwiłłówna</label>
+      <label><input type="radio" name="q30" value="d"> d) Anna Jagiellonka</label>
+    </div>
+
+    <div class="controls">
+      <button id="prev">Poprzednie</button>
+      <button id="next" class="primary">Następne</button>
+      <button id="finish">Zakończ i sprawdź wynik</button>
+    </div>
+  </main>
+
+  <section id="result" class="card">
+    <h2>Wynik</h2>
+    <p id="scoreText"></p>
+    <p id="analysis"></p>
+    <button id="retry">Uruchom ponownie</button>
+  </section>
+
+  <footer>
+    <p>Interpretacja wyników (zgodna z przyjętymi normami edukacyjnymi dla wieku 10 lat):<br>
+    90–100% — poziom bardzo wysoki; 75–89% — poziom wysoki; 50–74% — poziom średni; 30–49% — poniżej średniej; 0–29% — znacznie poniżej normy.</p>
+  </footer>
+
+<script>
+const answers = {
+  q1:'c',q2:'b',q3:'c',q4:'c',q5:'b',q6:'c',q7:'b',q8:'b',q9:'c',q10:'b',
+  q11:'c',q12:'c',q13:'a',q14:'c',q15:'d',q16:'c',q17:'a',q18:'c',q19:'a',q20:'c',
+  q21:'b',q22:'b',q23:'b',q24:'b',q25:'b',q26:'b',q27:'c',q28:'c',q29:'c',q30:'c'
+};
+
+let current = 1;
+const total = 30;
+const totalSeconds = 60*60; // 60 minutes
+let timeLeft = totalSeconds;
+let timerId;
+
+function show(n){
+  for(let i=1;i<=total;i++){
+    const el = document.getElementById('q'+i);
+    if(!el) continue;
+    el.classList.toggle('active', i===n);
+  }
+  current = n;
+}
+
+function next(){ if(current<total) show(current+1); }
+function prev(){ if(current>1) show(current-1); }
+
+document.getElementById('next').addEventListener('click', ()=>{ next(); });
+document.getElementById('prev').addEventListener('click', ()=>{ prev(); });
+
+document.getElementById('finish').addEventListener('click', ()=>{ if(confirm('Czy na pewno zakończyć test i sprawdzić wynik?')) finishTest(); });
+
+document.getElementById('retry').addEventListener('click', ()=>{ location.reload(); });
+
+function startTimer(){
+  timerId = setInterval(()=>{
+    timeLeft--;
+    const m = Math.floor(timeLeft/60).toString().padStart(2,'0');
+    const s = (timeLeft%60).toString().padStart(2,'0');
+    document.getElementById('timer').textContent = m+':'+s;
+    if(timeLeft<=0){ clearInterval(timerId); finishTest(); }
+  },1000);
+}
+
+function finishTest(){
+  clearInterval(timerId);
+  let correct = 0;
+  for(let i=1;i<=total;i++){
+    const name = 'q'+i;
+    const radios = document.getElementsByName(name);
+    let chosen = null;
+    for(const r of radios){ if(r.checked) chosen = r.value; }
+    if(chosen && chosen === answers[name]) correct++;
+  }
+  const percent = Math.round((correct/total)*100);
+  document.getElementById('scoreText').textContent = `Poprawne: ${correct} z ${total} — wynik: ${percent}%`;
+  let interp='';
+  if(percent>=90) interp='Poziom bardzo wysoki (powyżej średniej europejskiej).';
+  else if(percent>=75) interp='Poziom wysoki (zgodny lub lekko powyżej średniej).';
+  else if(percent>=50) interp='Poziom średni (w granicach typowych wyników rówieśników).';
+  else if(percent>=30) interp='Poniżej średniej (wymaga wsparcia).';
+  else interp='Znacznie poniżej normy (zalecane dodatkowe ćwiczenia).';
+  document.getElementById('analysis').textContent = interp;
+  document.getElementById('quiz').style.display='none';
+  document.getElementById('result').style.display='block';
+}
+
+// Initialize
+show(1);
+startTimer();
+</script>
+</body>
+</html>
